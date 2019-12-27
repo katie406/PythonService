@@ -13,7 +13,7 @@ import win32serviceutil
 import win32event
 import servicemanager
 
-pdf_files  = glob.glob('/Users/katie.pederson/OneDrive - Simms Fishing Products/TestPowerappsPythonFlow/*') #this gets all files in the folder
+pdf_files  = glob.glob('/Users/katie.pederson//Users/katie.pederson/TestPowerappsPythonFlow/*') #this gets all files in the folder
 latest_file = max(pdf_files, key=os.path.getctime) #this gets the most recently created/modified file in the folder
 acrobat = 'C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe'
 name = win32print.GetDefaultPrinter()
@@ -44,7 +44,7 @@ class PythonCornerExample(SMWinservice):
 
 
 class Watcher:
-    DIRECTORY_TO_WATCH = "/Users/katie.pederson/OneDrive - Simms Fishing Products/TestPowerappsPythonFlow"
+    DIRECTORY_TO_WATCH = "/Users/katie.pederson/TestPowerappsPythonFlow"
     # DIRECTORY_TO_WATCH = "C:\\test_py"
 
     def __init__(self):
@@ -74,7 +74,7 @@ class Handler(FileSystemEventHandler):
         elif event.event_type == 'created':
             # Take any action here when a file is first created.
             # print ("Received created event - %s.") % event.src_path
-            # f = open("C:\\Users\\katie.pederson\\OneDrive - Simms Fishing Products\\TestPowerappsPythonFlow\\test.txt","a+")
+            # f = open("C:\\Users\\katie.pederson\\TestPowerappsPythonFlow\\test.txt","a+")
             # f.write("Change2!! \n")
             # f.close()
             for i in range(1):
