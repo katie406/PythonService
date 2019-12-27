@@ -1,5 +1,5 @@
 # PythonService
-A Python Script that runs a Windows Service 
+A Python Script that runs a Windows Service - this service monitors a folder and prints to your default printer when a new item is created in the folder
 Install by: python test.py install
 Delete service by: sc delete [Service Name]
 Please note: The service will continually try to stop, the only way I have found to fully stop the service is to restart the pc. 
